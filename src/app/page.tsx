@@ -285,17 +285,17 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {[
               {
-                img: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80",
+                img: "/fleet/executive-sedans.jpg",
                 name: "Executive Sedan",
                 spec: "3 passengers · 3 bags",
               },
               {
-                img: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=80",
+                img: "/fleet/executive-suvs.jpg",
                 name: "Executive SUV",
                 spec: "6 passengers · 6 bags",
               },
               {
-                img: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80",
+                img: "https://images.pexels.com/photos/17455633/pexels-photo-17455633.jpeg?auto=compress&cs=tinysrgb&w=800",
                 name: "Vans, Limos & Sprinters",
                 spec: "Arranged on request",
               },

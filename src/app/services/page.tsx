@@ -91,16 +91,14 @@ const vehicleTypes = [
     name: "Executive Sedan",
     passengers: "3",
     luggage: "3",
-    image:
-      "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80",
+    image: "/fleet/executive-sedans.jpg",
     tag: "Everyday Rides",
   },
   {
     name: "Executive SUV",
     passengers: "6",
     luggage: "6",
-    image:
-      "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=80",
+    image: "/fleet/executive-suvs.jpg",
     tag: "Most Requested",
   },
   {
@@ -108,7 +106,7 @@ const vehicleTypes = [
     passengers: "Varies",
     luggage: "Varies",
     image:
-      "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80",
+      "https://images.pexels.com/photos/17455633/pexels-photo-17455633.jpeg?auto=compress&cs=tinysrgb&w=800",
     tag: "By Request",
   },
 ];
@@ -120,8 +118,7 @@ export default function ServicesPage() {
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=2000&q=80')",
+            backgroundImage: "url('/fleet/executive-suvs.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/50 to-[#0A0A0A]" />
