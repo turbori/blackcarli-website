@@ -15,8 +15,7 @@ import { SITE, hasPhone } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Corporate Accounts",
-  description:
-    "Set up a corporate transportation account with SG Limo. Dependable, flat-rate chauffeured service for executives, staff, and visiting clients across NYC, Long Island, Connecticut, and New Jersey.",
+  description: `Set up a corporate transportation account with ${SITE.name}. Dependable, flat-rate chauffeured service for executives, staff, and visiting clients across NYC, Long Island, Connecticut, and New Jersey.`,
 };
 
 const benefits = [

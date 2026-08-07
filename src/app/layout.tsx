@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "black car service New Jersey",
     "Uber Black alternative NYC",
     "private driver Long Island",
-    "sg limo",
+    "blackcarli",
   ],
   openGraph: {
     type: "website",

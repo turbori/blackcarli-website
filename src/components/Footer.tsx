@@ -26,9 +26,8 @@ export default function Footer() {
           <div>
             <div className="flex items-baseline gap-2 mb-4">
               <span className="text-3xl font-black tracking-widest text-gold-gradient">
-                {SITE.shortName}
+                {SITE.name}
               </span>
-              <span className="text-xs font-light tracking-[0.3em] text-[#999] uppercase">Limo</span>
             </div>
             <p className="text-[#999] text-sm leading-relaxed">
               Private chauffeured sedans and SUVs serving the five boroughs of New York City, Long

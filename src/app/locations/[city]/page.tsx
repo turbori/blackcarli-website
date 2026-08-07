@@ -25,7 +25,7 @@ const cityData: Record<string, CityInfo> = {
     headline: "Private Chauffeur Service in Manhattan, NY",
     subheadline: "Midtown, Lower Manhattan, and everywhere between — a driver who knows the city.",
     intro: [
-      "Manhattan traffic, avenue timing, and tunnel congestion punish anyone relying on a rideshare app's estimate. SG Limo clients in Manhattan use us for corporate travel, airport transfers, and evening transportation where a confirmed pickup time actually matters.",
+      `Manhattan traffic, avenue timing, and tunnel congestion punish anyone relying on a rideshare app's estimate. ${SITE.name} clients in Manhattan use us for corporate travel, airport transfers, and evening transportation where a confirmed pickup time actually matters.`,
       "Flat-rate pricing plus tolls, wait time, and gratuity means your cost is confirmed before you book — regardless of bridge traffic or a late meeting.",
     ],
     nearby: ["Brooklyn", "Queens", "The Bronx", "Jersey City, NJ"],
@@ -44,7 +44,7 @@ const cityData: Record<string, CityInfo> = {
     headline: "Private Chauffeur Service in Brooklyn, NY",
     subheadline: "From Downtown Brooklyn to the waterfront, reliable transportation across the borough.",
     intro: [
-      "Brooklyn's mix of residential neighborhoods and business districts means a wide range of pickup points — SG Limo covers all of them with the same flat-rate standard.",
+      `Brooklyn's mix of residential neighborhoods and business districts means a wide range of pickup points — ${SITE.name} covers all of them with the same flat-rate standard.`,
       "Whether it's a JFK run from Park Slope or a corporate pickup in Downtown Brooklyn, your rate is confirmed before you book.",
     ],
     nearby: ["Manhattan", "Queens", "Staten Island"],
@@ -62,7 +62,7 @@ const cityData: Record<string, CityInfo> = {
     headline: "Airport & Car Service in Queens, NY",
     subheadline: "Home to JFK and LaGuardia — our most requested airport transfer borough.",
     intro: [
-      "Queens sits at the center of the region's air travel, with both JFK and LaGuardia inside the borough. SG Limo provides flat-rate transfers to and from both, with flight status tracked so pickup timing adjusts automatically.",
+      `Queens sits at the center of the region's air travel, with both JFK and LaGuardia inside the borough. ${SITE.name} provides flat-rate transfers to and from both, with flight status tracked so pickup timing adjusts automatically.`,
       "We also serve Queens residents and businesses for corporate travel and point-to-point rides across the city.",
     ],
     nearby: ["Manhattan", "Brooklyn", "Nassau County, NY"],
@@ -80,7 +80,7 @@ const cityData: Record<string, CityInfo> = {
     headline: "Private Car Service in The Bronx, NY",
     subheadline: "Reliable transportation across the Bronx and into Manhattan or Westchester.",
     intro: [
-      "SG Limo covers the Bronx for airport transfers, corporate travel, and point-to-point rides, with the same flat-rate pricing used across the rest of the tri-state area.",
+      `${SITE.name} covers the Bronx for airport transfers, corporate travel, and point-to-point rides, with the same flat-rate pricing used across the rest of the tri-state area.`,
     ],
     nearby: ["Manhattan", "Westchester County, NY", "Connecticut"],
     airports: ["LaGuardia (LGA) — ~20 min", "JFK International (JFK) — ~35 min", "Newark Liberty (EWR) — ~40 min"],
@@ -96,7 +96,7 @@ const cityData: Record<string, CityInfo> = {
     headline: "Private Car Service in Staten Island, NY",
     subheadline: "Airport and city transfers for Staten Island residents and businesses.",
     intro: [
-      "SG Limo provides flat-rate transportation for Staten Island clients heading into Manhattan, out to the airports, or across into New Jersey.",
+      `${SITE.name} provides flat-rate transportation for Staten Island clients heading into Manhattan, out to the airports, or across into New Jersey.`,
     ],
     nearby: ["Brooklyn", "Jersey City, NJ", "Manhattan"],
     airports: ["Newark Liberty (EWR) — ~35 min", "JFK International (JFK) — ~50 min", "LaGuardia (LGA) — ~55 min"],
@@ -130,7 +130,7 @@ const cityData: Record<string, CityInfo> = {
     headline: "Private Chauffeur Service in Great Neck, NY",
     subheadline: "Close to Manhattan and JFK — executive travel done right.",
     intro: [
-      "Great Neck's proximity to both Manhattan and JFK makes it a frequent pickup point for our airport and corporate clients. SG Limo offers flat-rate service with a confirmed price before you book.",
+      `Great Neck's proximity to both Manhattan and JFK makes it a frequent pickup point for our airport and corporate clients. ${SITE.name} offers flat-rate service with a confirmed price before you book.`,
     ],
     nearby: ["Garden City", "Queens", "Manhattan"],
     airports: ["JFK International (JFK) — ~20 min", "LaGuardia (LGA) — ~20 min", "Newark Liberty (EWR) — ~45 min"],
@@ -162,7 +162,7 @@ const cityData: Record<string, CityInfo> = {
     headline: "Private Car Service in Huntington, NY",
     subheadline: "Point-to-point and event transportation on the North Shore.",
     intro: [
-      "Huntington clients use SG Limo for weddings, events, and airport transfers — flat-rate pricing with a driver who knows the North Shore.",
+      `Huntington clients use ${SITE.name} for weddings, events, and airport transfers — flat-rate pricing with a driver who knows the North Shore.`,
     ],
     nearby: ["Melville", "Great Neck", "Manhattan"],
     airports: ["JFK International (JFK) — ~50 min", "LaGuardia (LGA) — ~45 min", "Islip (ISP) — ~30 min"],
@@ -178,7 +178,7 @@ const cityData: Record<string, CityInfo> = {
     headline: "Executive Car Service in Greenwich, CT",
     subheadline: "Fairfield County's most affluent community, served with the same flat-rate standard.",
     intro: [
-      "Greenwich clients expect discretion and consistency — SG Limo provides flat-rate chauffeured transportation for executive travel, airport transfers, and events, with a driver you can rely on for every trip.",
+      `Greenwich clients expect discretion and consistency — ${SITE.name} provides flat-rate chauffeured transportation for executive travel, airport transfers, and events, with a driver you can rely on for every trip.`,
     ],
     nearby: ["Stamford, CT", "Westchester County, NY", "The Bronx, NY"],
     airports: ["Westchester County (HPN) — ~25 min", "LaGuardia (LGA) — ~45 min", "JFK International (JFK) — ~60 min"],
@@ -210,7 +210,7 @@ const cityData: Record<string, CityInfo> = {
     headline: "Private Car Service in Jersey City, NJ",
     subheadline: "Cross-Hudson transportation for professionals and travelers.",
     intro: [
-      "Jersey City's density of finance and corporate professionals makes it a regular pickup point for our Manhattan commuters and airport travelers. SG Limo covers Jersey City with the same flat-rate pricing used across the rest of our service area.",
+      `Jersey City's density of finance and corporate professionals makes it a regular pickup point for our Manhattan commuters and airport travelers. ${SITE.name} covers Jersey City with the same flat-rate pricing used across the rest of our service area.`,
     ],
     nearby: ["Hoboken, NJ", "Manhattan", "Staten Island, NY"],
     airports: ["Newark Liberty (EWR) — ~15 min", "LaGuardia (LGA) — ~40 min", "JFK International (JFK) — ~45 min"],
@@ -226,7 +226,7 @@ const cityData: Record<string, CityInfo> = {
     headline: "Private Car Service in Hoboken, NJ",
     subheadline: "Fast, flat-rate service into Manhattan and to all three area airports.",
     intro: [
-      "Hoboken's proximity to Newark Airport and Manhattan makes it one of our most efficient pickup points in New Jersey. SG Limo covers Hoboken for corporate travel, airport transfers, and evening transportation.",
+      `Hoboken's proximity to Newark Airport and Manhattan makes it one of our most efficient pickup points in New Jersey. ${SITE.name} covers Hoboken for corporate travel, airport transfers, and evening transportation.`,
     ],
     nearby: ["Jersey City, NJ", "Manhattan", "Newark, NJ"],
     airports: ["Newark Liberty (EWR) — ~15 min", "LaGuardia (LGA) — ~35 min", "JFK International (JFK) — ~40 min"],

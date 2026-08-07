@@ -33,9 +33,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-baseline gap-2">
             <span className="text-2xl font-black tracking-widest text-gold-gradient">
-              {SITE.shortName}
+              {SITE.name}
             </span>
-            <span className="text-sm font-light tracking-[0.3em] text-[#999] uppercase">Limo</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">

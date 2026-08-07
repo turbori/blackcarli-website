@@ -1,7 +1,7 @@
-# SG Limo — Marketing & Booking Website
+# BLACKCARLI — Marketing & Booking Website
 
-Marketing site for SG Limo, a private chauffeur service covering the five boroughs of NYC, Long
-Island, Connecticut, and New Jersey.
+Marketing site for BLACKCARLI (formerly "SG Limo"), a private chauffeur service covering the five
+boroughs of NYC, Long Island, Connecticut, and New Jersey.
 
 ## Stack
 
@@ -25,8 +25,13 @@ All editable business info (name, email, phone, insurance, domain) lives in one 
 
 ## Open items — confirm with client before launch
 
-- [ ] **Domain** — client does not own one yet. Site currently uses `sglimo.com` as a placeholder
-      throughout metadata/schema. Update `src/lib/site.ts` (`domain`, `url`) once purchased.
+- [ ] **Domain** — client does not own one yet. Site currently uses `blackcarli.com` as a
+      placeholder throughout metadata/schema. Update `src/lib/site.ts` (`domain`, `url`) once purchased.
+- [ ] **Legal entity name** — `SITE.legalName` was updated to "BLACKCARLI Inc." as a placeholder.
+      Confirm whether the client has actually renamed the LLC or filed a DBA — it may still be
+      legally registered as "SG Limo Inc."
+- [ ] **Business email** — `SITE.email` is still `sglimo646@gmail.com`, tied to the old brand name.
+      Confirm with the client whether they want a new inbox to match BLACKCARLI.
 - [ ] **Phone number** — not yet provided. `SITE.phone` is empty, so phone CTAs are hidden and
       email is used instead. Add the number to `src/lib/site.ts` once available.
 - [ ] **TLC license number** — not yet provided. Add to `src/lib/site.ts` (`tlcLicense`) and
