@@ -11,6 +11,7 @@ import {
   Loader2,
 } from "lucide-react";
 import { SITE, hasPhone } from "@/lib/site";
+import AddressInput from "@/components/AddressInput";
 
 const serviceTypes = [
   { value: "airport", label: "Airport Transfer", icon: Plane },
@@ -222,28 +223,24 @@ export default function QuoteForm() {
           <label className="block text-xs font-medium text-[#999] mb-2 tracking-wide">
             Pickup Location <span className="text-red-500">*</span>
           </label>
-          <input
-            type="text"
+          <AddressInput
             name="pickup"
             required
             value={form.pickup}
-            onChange={handleChange}
+            onChange={(value) => setForm((prev) => ({ ...prev, pickup: value }))}
             placeholder="123 Main St, Garden City, NY"
-            className="luxury-input w-full px-4 py-3 text-sm"
           />
         </div>
         <div>
           <label className="block text-xs font-medium text-[#999] mb-2 tracking-wide">
             Destination <span className="text-red-500">*</span>
           </label>
-          <input
-            type="text"
+          <AddressInput
             name="dropoff"
             required
             value={form.dropoff}
-            onChange={handleChange}
+            onChange={(value) => setForm((prev) => ({ ...prev, dropoff: value }))}
             placeholder="JFK International Airport"
-            className="luxury-input w-full px-4 py-3 text-sm"
           />
         </div>
       </div>

@@ -3,11 +3,11 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { SITE, hasPhone } from "@/lib/site";
 
 const services = [
-  "Airport Transfers",
-  "Corporate Travel",
-  "Point-to-Point",
-  "Hourly / As-Directed",
-  "Weddings & Events",
+  { label: "Airport Transfers", slug: "airport" },
+  { label: "Corporate Travel", slug: "corporate" },
+  { label: "Point-to-Point", slug: "point-to-point" },
+  { label: "Hourly / As-Directed", slug: "hourly" },
+  { label: "Weddings & Events", slug: "weddings-events" },
 ];
 
 const quickLinks = [
@@ -41,12 +41,12 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3">
               {services.map((s) => (
-                <li key={s}>
+                <li key={s.slug}>
                   <Link
-                    href="/services"
+                    href={`/services#${s.slug}`}
                     className="text-sm text-[#999] hover:text-[#C9A84C] transition-colors"
                   >
-                    {s}
+                    {s.label}
                   </Link>
                 </li>
               ))}

@@ -25,6 +25,7 @@ export const metadata: Metadata = {
 
 const services = [
   {
+    slug: "airport",
     icon: Plane,
     title: "Airport Transportation",
     subtitle: "JFK · LaGuardia · Newark",
@@ -37,6 +38,7 @@ const services = [
     ],
   },
   {
+    slug: "corporate",
     icon: Building2,
     title: "Corporate Transportation",
     subtitle: "For Businesses & Executives",
@@ -49,6 +51,7 @@ const services = [
     ],
   },
   {
+    slug: "point-to-point",
     icon: MapPinned,
     title: "Point-to-Point",
     subtitle: "One Rate, One Ride",
@@ -61,6 +64,7 @@ const services = [
     ],
   },
   {
+    slug: "hourly",
     icon: CalendarDays,
     title: "Hourly / As-Directed",
     subtitle: "Your Driver, Your Schedule",
@@ -73,6 +77,7 @@ const services = [
     ],
   },
   {
+    slug: "weddings-events",
     icon: Heart,
     title: "Weddings & Events",
     subtitle: "Arrive in Style",
@@ -142,7 +147,11 @@ export default function ServicesPage() {
             {services.map((s) => {
               const Icon = s.icon;
               return (
-                <div key={s.title} className="luxury-card p-8 flex flex-col">
+                <div
+                  key={s.title}
+                  id={s.slug}
+                  className="luxury-card p-8 flex flex-col scroll-mt-28"
+                >
                   <div className="w-12 h-12 rounded-xl bg-[#1E1A0A] flex items-center justify-center mb-5">
                     <Icon size={22} className="text-[#C9A84C]" />
                   </div>
