@@ -30,8 +30,7 @@ All editable business info (name, email, phone, insurance, domain) lives in one 
 - [ ] **Legal entity name** — `SITE.legalName` was updated to "BLACKCARLI Inc." as a placeholder.
       Confirm whether the client has actually renamed the LLC or filed a DBA — it may still be
       legally registered as "SG Limo Inc."
-- [ ] **Business email** — `SITE.email` is still `sglimo646@gmail.com`, tied to the old brand name.
-      Confirm with the client whether they want a new inbox to match BLACKCARLI.
+- [x] **Business email** — updated to `blackcarlongisland@gmail.com` per client request (Aug 19).
 - [ ] **Phone number** — not yet provided. `SITE.phone` is empty, so phone CTAs are hidden and
       email is used instead. Add the number to `src/lib/site.ts` once available.
 - [ ] **TLC license number** — not yet provided. Add to `src/lib/site.ts` (`tlcLicense`) and

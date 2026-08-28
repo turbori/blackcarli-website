@@ -15,9 +15,7 @@ export const SITE = {
   domain: "blackcarli.com",
   url: "https://blackcarli.com",
 
-  // TODO: this inbox is tied to the old "SG Limo" brand — confirm whether the
-  // client wants a new email address to match BLACKCARLI before launch.
-  email: "sglimo646@gmail.com",
+  email: "blackcarlongisland@gmail.com",
 
   // TODO: client has not provided a business phone number yet.
   phone: "",

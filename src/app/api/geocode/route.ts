@@ -25,7 +25,7 @@ export async function GET(req: Request) {
   try {
     const res = await fetch(`https://nominatim.openstreetmap.org/search?${params}`, {
       headers: {
-        "User-Agent": "BLACKCARLI-website/1.0 (contact: sglimo646@gmail.com)",
+        "User-Agent": "BLACKCARLI-website/1.0 (contact: blackcarlongisland@gmail.com)",
         "Accept-Language": "en",
       },
       // Nominatim's free tier is small — cache identical queries briefly.
