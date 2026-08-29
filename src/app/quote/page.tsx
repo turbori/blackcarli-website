@@ -1,8 +1,9 @@
-import QuoteForm from "@/components/QuoteForm";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Phone, Mail, Clock, MapPin } from "lucide-react";
 import type { Metadata } from "next";
 import { SITE, hasPhone } from "@/lib/site";
+
+const MOOVS_BOOKING_URL = "https://customer.moovs.app/blackcarli/iframe";
 
 export const metadata: Metadata = {
   title: "Request a Quote",
@@ -38,8 +39,8 @@ export default function QuotePage() {
           <h1 className="text-5xl md:text-6xl font-black mb-6">Request a Quote</h1>
           <div className="gold-divider mx-auto mb-6" />
           <p className="text-[#999] text-lg max-w-2xl mx-auto leading-relaxed">
-            Fill out the form below and we&apos;ll follow up with a confirmed flat rate plus
-            tolls, wait time, and gratuity.
+            Get an instant, confirmed flat rate and book online in minutes — plus tolls, wait
+            time, and gratuity.
           </p>
         </div>
       </section>
@@ -91,22 +92,23 @@ export default function QuotePage() {
                 </div>
 
                 <div className="luxury-card p-7">
-                  <h3 className="text-sm font-bold mb-3">Response Time</h3>
+                  <h3 className="text-sm font-bold mb-3">Instant Booking</h3>
                   <p className="text-xs text-[#999] leading-relaxed">
-                    We respond to quote requests within a few hours. For same-day bookings, email
-                    us directly.
+                    Pricing and confirmation are instant through our booking system. For
+                    same-day or urgent requests, email us directly.
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-2 order-1 lg:order-2">
-              <div className="luxury-card p-8 md:p-10">
-                <h2 className="text-xl font-bold mb-2">Trip Details</h2>
-                <p className="text-sm text-[#999] mb-8">
-                  All fields marked <span className="text-red-400">*</span> are required.
-                </p>
-                <QuoteForm />
+              <div className="luxury-card p-4 md:p-6 overflow-hidden">
+                <iframe
+                  src={MOOVS_BOOKING_URL}
+                  title="Book a Ride"
+                  className="w-full min-h-[1000px] rounded-xl border-0"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>

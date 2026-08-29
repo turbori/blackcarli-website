@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -103,6 +104,19 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        {/* Moovs booking widget — client operator ID, provided Aug 29 2026 */}
+        <Script id="moovs-widget" strategy="afterInteractive">
+          {`
+            window.moovsAPI = window.moovsAPI || [];
+            window.moovsAPI.push(["operator", "17592f52-9b84-11f1-b114-9bfa6e1eddaf"]);
+            (function(m, oo, v, s) {
+                s = m.createElement(oo);
+                s.src = v;
+                s.async = 1;
+                m.head.appendChild(s);
+            })(document, "script", "https://static.moovs.app");
+          `}
+        </Script>
       </body>
     </html>
   );
