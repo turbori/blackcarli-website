@@ -1,59 +1,55 @@
-# BLACKCARLI — Marketing & Booking Website
+# BLACKCARLI — Private Chauffeur Service Website
 
-Marketing site for BLACKCARLI (formerly "SG Limo"), a private chauffeur service covering the five
-boroughs of NYC, Long Island, Connecticut, and New Jersey.
+Marketing and booking website for BLACKCARLI, a private chauffeured transportation service
+serving the five boroughs of NYC, Long Island, Connecticut, and New Jersey.
 
 ## Stack
 
 - Next.js 16 (App Router) · TypeScript · Tailwind CSS 4
-- Email: Resend, sent from the `/quote` form via `src/app/api/quote/route.ts`
-- Deployed on Vercel under the **RiDevelop** team (not Hydden)
+- Booking: live Moovs widget embedded on `/quote` (instant pricing + deposits)
+- Address autocomplete via OpenStreetMap, proxied through `/api/geocode`
+- Deployed on Vercel
 
-## Commands
+## Getting Started
 
 ```bash
 npm install
 npm run dev     # start dev server (localhost:3000)
-npm run build   # TypeScript check + production build
-npm run lint     # ESLint
+npm run build   # production build
+npm run lint    # lint check
 ```
 
-## Business info
+## Configuration
 
-All editable business info (name, email, phone, insurance, domain) lives in one place:
-`src/lib/site.ts`.
+All business info — name, email, phone, service areas, insurance, etc. — is centralized in
+`src/lib/site.ts`. Update values there to change what's shown across the site.
 
-## Open items — confirm with client before launch
+```ts
+// src/lib/site.ts
+export const SITE = {
+  name: "BLACKCARLI",
+  email: "blackcarlongisland@gmail.com",
+  domain: "blackcarli.com",
+  // ...
+};
+```
 
-- [ ] **Domain** — client does not own one yet. Site currently uses `blackcarli.com` as a
-      placeholder throughout metadata/schema. Update `src/lib/site.ts` (`domain`, `url`) once purchased.
-- [ ] **Legal entity name** — `SITE.legalName` was updated to "BLACKCARLI Inc." as a placeholder.
-      Confirm whether the client has actually renamed the LLC or filed a DBA — it may still be
-      legally registered as "SG Limo Inc."
-- [x] **Business email** — updated to `blackcarlongisland@gmail.com` per client request (Aug 19).
-- [ ] **Phone number** — not yet provided. `SITE.phone` is empty, so phone CTAs are hidden and
-      email is used instead. Add the number to `src/lib/site.ts` once available.
-- [ ] **TLC license number** — not yet provided. Add to `src/lib/site.ts` (`tlcLicense`) and
-      surface it in the footer/about page once available, since it's a meaningful trust signal.
-- [ ] **RESEND_API_KEY** — set this env var in Vercel (and locally in `.env.local`) for the quote
-      form to send email. Also verify a sending domain in Resend once the real domain is live —
-      until then, emails send from Resend's shared `onboarding@resend.dev` sandbox address.
-- [ ] **Real fleet/founder photography** — all vehicle and hero imagery is licensed stock
-      (Unsplash), clearly labeled as placeholder in the UI. Swap in real photos once available.
-- [ ] **MOOVS integration** — client has an unpaid MOOVS account. Once upgraded to a plan with a
-      website booking widget + Stripe deposits, replace/augment the `/quote` page form with the
-      MOOVS embed for live pricing and online payment.
-- [ ] **Spanish translation** — client requested English/Spanish bilingual support. Not yet built;
-      requires professional translation (not machine translation) before implementation.
-- [ ] **Reviews** — client currently has no reviews. No fabricated testimonials or ratings are
-      used anywhere on the site. Set up post-ride review requests once live to start building
-      real social proof.
-
-## Structure
+## Project Structure
 
 ```
-src/app/            → routes (home, services, corporate, about, quote, locations/[city])
-src/app/api/quote/   → Resend email handler for the quote form
-src/components/      → Navbar, Footer, Breadcrumbs, QuoteForm
-src/lib/site.ts      → central business info (name, email, phone, domain, etc.)
+src/app/               → pages (home, services, corporate, about, quote, locations/[city])
+src/app/api/geocode/   → address autocomplete for the quote form
+src/components/        → Navbar, Footer, shared UI
+src/lib/site.ts        → central business info config
+public/fleet/          → vehicle photography
 ```
+
+## Notes for future updates
+
+- **Phone number & TLC license** — not yet set in `src/lib/site.ts`. Adding them surfaces phone
+  CTAs and a trust-building license number in the footer/about page.
+- **Fleet photography** — swap files in `public/fleet/` to update vehicle imagery sitewide.
+- **Spanish translation** — not yet built; would require i18n routing plus professional
+  (non-machine) translation.
+- **Reviews** — no testimonials are shown yet. Once live, Moovs can trigger post-ride review
+  requests to start building real social proof.
